@@ -1,0 +1,11 @@
+@use "sass:math";
+@function column($layout-grid-count, $column-number) {
+  $X: math.div(100%, $layout-grid-count);
+  @return $X * $column-number;
+}
+
+@function offset($layout-grid-count, $column-number) {
+  $X: math.div(100%, $layout-grid-count);
+  @return $X * $column-number;
+}
+

@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import '../assets/scss/entry.scss'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import AppLayout from "../lib/layouts/AppLayout";
+
+function MyApp({Component, pageProps}) {
+    return (
+        <AppLayout>
+            <Component {...pageProps} />
+        </AppLayout>
+    )
 }
 
 export default MyApp

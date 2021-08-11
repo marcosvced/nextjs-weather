@@ -1,0 +1,30 @@
+
+@each $name, $value in $breakpoints {
+  @include media($name) {
+    $column: if($name == '', 'col', '#{$name}\\:col');
+    @each $suffix, $value in $layout-columns {
+      @for $column-number from 1 through $value {
+        @if $column-number != $value {
+          /*
+          ** Column example without breakpoint: .col-1/24
+          ** Column example with breakpoint: .md:col-1/24
+          */
+          .#{$column}-#{$column-number}\/#{$value} {
+            width: #{column($value, $column-number)};
+          }
+
+          /*
+          ** Offset example without breakpoint: .col-offset-1/24
+          ** Offset example with breakpoint: .md:col-offset-1/24
+          */
+          .#{$column}-offset-#{$column-number}\/#{$value} {
+            margin-left: #{offset($value, $column-number)};
+          }
+        }
+      }
+    }
+    .#{$column}-full {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/*
+** Tools to crate media queries
+*/
+
+@mixin media($size) {
+  @if map_has-key($breakpoints, $size) {
+    @media screen and (min-width: map_get($breakpoints, $size)) {
+      @content
+    }
+  } @else {
+    @media screen and (min-width: $size) {
+      @content
+    }
+  }
+}

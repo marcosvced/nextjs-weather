@@ -1,0 +1,14 @@
+@use "sass:math";
+/// @param {Number} $size - number in pixels to be converted to rem
+/// @return {Number} - size in rem unit
+@function rem-size($size) {
+  @return $size / 16 + 0rem;
+}
+
+
+/// @param {Number} $size - number in pixels to be converted to em
+/// @param {Number} $base - parent font size
+/// @return {Number} - size in em unit
+@function em-size($size, $base) {
+  @return $size / $base + 0em;
+}

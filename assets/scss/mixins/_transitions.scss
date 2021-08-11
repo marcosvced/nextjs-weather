@@ -1,0 +1,34 @@
+@mixin slow-transition($properties) {
+  transition: {
+    property: get-transition-list($properties);
+    duration: 0.3s;
+    timing-function: ease-in-out;
+  };
+}
+
+@mixin fast-transition($properties) {
+  @include slow-transition($properties);
+  transition: {
+    duration: 0.25s;
+    timing-function: ease;
+  };
+}
+
+$transitionNames: ('fade');
+@mixin transition($transitionName) {
+  @if (false == contains($transitionNames, $transitionName)) {
+    @error "Transition name doen't exists";
+  }
+
+  @if ($transitionName == 'fade') {
+    &-enter-active,
+    &-leave-active {
+      @include slow-transition(opacity);
+    }
+
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+}

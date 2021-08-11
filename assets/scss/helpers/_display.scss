@@ -1,0 +1,55 @@
+
+/*
+ ** Display utilities as row, block, etc.
+ ** Display example without breakpoint: .inline-block
+ ** Display example with breakpoint: .md:inline-block
+ */
+@each $name, $value in $breakpoints {
+  @include media($name) {
+    $prefix: if($name != '', '#{$name}\\:', '');
+    .#{$prefix}row-wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+      }
+    }
+
+    .#{$prefix}row {
+      display: flex;
+      flex-direction: row;
+
+      &-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+
+    .#{$prefix}column {
+      display: flex;
+      flex-direction: column;
+
+      &-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .#{$prefix}none {
+      display: none;
+    }
+
+    .#{$prefix}block {
+      display: block;
+    }
+
+    .#{$prefix}inline-block {
+      display: inline-block;
+    }
+
+  }
+}

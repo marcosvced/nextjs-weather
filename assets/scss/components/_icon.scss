@@ -1,0 +1,11 @@
+#app-icon {
+  display: inline-grid;
+  vertical-align: middle;
+  line-height: 0;
+  @include square(min-content);
+
+  .a-icon {
+    height: 1em;
+    width: 1em;
+  }
+}

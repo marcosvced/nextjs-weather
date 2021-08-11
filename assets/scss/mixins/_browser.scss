@@ -1,0 +1,17 @@
+@mixin only($browser) {
+  @at-root body[data-browser="#{$browser}"] & {
+    @content;
+  }
+}
+
+@mixin safari-only() {
+  @include only('safari') {
+    @content;
+  }
+}
+
+@mixin firefox-only() {
+  @include only('firefox') {
+    @content;
+  }
+}

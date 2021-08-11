@@ -1,0 +1,11 @@
+@function get-transition-list($properties) {
+  $list: '';
+  @each $property, $index in $properties {
+    @if $index == 0 {
+      $list: $property;
+    } @else {
+      $list: #{$list', '$property};
+    }
+  }
+  @return $list;
+}

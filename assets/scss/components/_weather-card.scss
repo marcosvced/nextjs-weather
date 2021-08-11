@@ -1,0 +1,85 @@
+.weather-card {
+  width: min-content;
+  height: min-content;
+  min-width: rem-size(271);
+  min-height: rem-size(264);
+  background: $c-light;
+  color: $c-primary;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: $s-space--24 $s-space--56 $s-space--56;
+
+  border-radius: $cr-standard;
+
+  @include media(lg) {
+    padding: $s-space--24;
+  }
+
+  .city {
+    margin-bottom: $s-space--16;
+    font: {
+      size: $f-size--medium;
+      weight: $f-weight--bold;
+    };
+  }
+
+  .weather {
+    margin-bottom: $s-space--56;
+    font: {
+      size: $f-size--small;
+      weight: $f-weight--medium;
+    };
+  }
+
+  .wrapper {
+    background-color: $c-primary;
+    border-radius: rem-size(120);
+    display: flex;
+    align-items: center;
+    color: $c-light;
+    padding: $s-space--16;
+    width: fit-content;
+    gap: $s-space--16;
+
+    @include media(lg) {
+      flex-direction: column;
+      margin-bottom: $s-space--24;
+    }
+
+    span {
+      display: block;
+    }
+
+    .temperature {
+      font: {
+        size: $f-size--large;
+        weight: $f-weight--medium;
+      };
+    }
+
+
+  }
+
+  .temperatures,
+  .humidity,
+  .wind {
+    display: none;
+    margin-bottom: $s-space--16;
+
+    @include media(lg) {
+      display: block;
+    }
+  }
+
+  .temperatures {
+    align-items: center;
+    gap: $s-space--4;
+    @include media(lg) {
+      display: flex;
+    }
+  }
+}

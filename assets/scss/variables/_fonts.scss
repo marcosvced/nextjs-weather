@@ -1,0 +1,17 @@
+/* Font Family */
+$f-title: Poppins, Roboto, sans-serif;
+$f-default: Mulish, Roboto, sans-serif;
+$f-number: 'Roboto Mono', monospace;
+
+/* Font size */
+$f-size--large: rem-size(26);
+$f-size--medium: rem-size(18);
+$f-size--regular: rem-size(16);
+$f-size--small: rem-size(14);
+
+/* Font weights */
+$f-weight--light: 300;
+$f-weight--regular: 400;
+$f-weight--medium: 500;
+$f-weight--semi-bold: 600;
+$f-weight--bold: 700;

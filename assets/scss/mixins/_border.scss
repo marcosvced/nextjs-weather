@@ -1,0 +1,4 @@
+/** box-shadow inset is used instead of a border so that the border does not increase the size of the button.*/
+@mixin border-solid-inset($color, $size: 1, $alpha: 1) {
+  box-shadow: 0 0 0 rem-size($size) rgba($color, $alpha) inset;
+}

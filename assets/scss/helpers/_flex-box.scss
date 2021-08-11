@@ -1,0 +1,76 @@
+
+@each $name, $value in $breakpoints {
+  @include media($name) {
+    $prefix: if($name != '', '#{$name}\\:', '');
+    [class*="column"],
+    [class*="row"] {
+      &.#{$prefix}align {
+        &-stretch {
+          align-items: stretch;
+        }
+
+        &-end {
+          align-items: flex-end;
+        }
+
+        &-start {
+          align-items: flex-start;
+        }
+
+        &-center {
+          align-items: center;
+        }
+
+        &-baseline {
+          align-items: baseline;
+        }
+      }
+
+      &.#{$prefix}justify {
+        &-strech {
+          justify-content: stretch;
+        }
+
+        &-end {
+          justify-content: flex-end;
+        }
+
+        &-start {
+          justify-content: flex-start;
+        }
+
+        &-center {
+          justify-content: center;
+        }
+
+        &-between {
+          justify-content: space-between;
+        }
+
+        &-around {
+          justify-content: space-around;
+        }
+
+        &-evenly {
+          justify-content: space-evenly;
+        }
+      }
+
+      &.#{$prefix}wrap {
+        flex-wrap: wrap;
+      }
+    }
+
+    .#{$prefix}flex-grow {
+      flex-grow: 1;
+    }
+
+    .#{$prefix}flex-shrink {
+      flex-shrink: 1;
+    }
+    
+    .#{$prefix}flex-basis {
+      flex-basis: 1px;
+    }
+  }
+}

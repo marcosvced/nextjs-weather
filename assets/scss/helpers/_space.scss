@@ -1,0 +1,112 @@
+
+/*
+ ** Space utilities as space-y, space-x, m-0, p-1 ,etc.
+ ** Space example without breakpoint: .space-y
+ ** Space example with breakpoint: .md:space-y
+ */
+
+@each $name, $value in $breakpoints {
+  @include media($name) {
+    $prefix: if($name != '', '#{$name}\\:', '');
+
+    .#{$prefix}space-y  {
+      @include space-y($gap);
+    }
+
+    .#{$prefix}space-x {
+      @include space-x($gap);
+    }
+
+    .#{$prefix}reverse-space-y > *:not(:first-child) {
+      margin-bottom: $gap;
+    }
+
+    .#{$prefix}reverse-space-x > *:not(:first-child) {
+      margin-right: $gap;
+    }
+
+    .#{$prefix}space-x-y {
+      @include space-x-y($gap);
+    }
+
+    @for $i from 0 through 3 {
+
+      /* Margin */
+      .#{$prefix}m {
+        &-#{$i} {
+          margin: $gap * $i;
+        }
+
+        &t-#{$i} {
+          margin-top: $gap * $i;
+        }
+
+        &b-#{$i} {
+          margin-bottom: $gap * $i;
+        }
+
+        &l-#{$i} {
+          margin-left: $gap * $i;
+        }
+
+        &r-#{$i} {
+          margin-right: $gap * $i;
+        }
+
+        &x-#{$i} {
+          margin: {
+            right: $gap * $i;
+            left: $gap * $i;
+          };
+        }
+
+        &y-#{$i} {
+          margin: {
+            top: $gap * $i;
+            bottom: $gap * $i;
+          };
+
+        }
+      }
+
+      /* Padding */
+      .#{$prefix}p {
+        &-#{$i} {
+          padding: $gap * $i;
+        }
+
+        &t-#{$i} {
+          padding-top: $gap * $i;
+        }
+
+        &b-#{$i} {
+          padding-bottom: $gap * $i;
+        }
+
+        &l-#{$i} {
+          padding-left: $gap * $i;
+        }
+
+        &r-#{$i} {
+          padding-right: $gap * $i;
+        }
+
+        &x-#{$i} {
+          padding: {
+            right: $gap * $i;
+            left: $gap * $i;
+          };
+        }
+
+        &y-#{$i} {
+          padding: {
+            top: $gap * $i;
+            bottom: $gap * $i;
+          };
+        }
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,4 @@
+@mixin outline-focus($color, $size: 8, $alpha: 0.15) {
+  outline: none;
+  box-shadow: 0 0 0 rem-size($size) rgba($color, $alpha);
+}

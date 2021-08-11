@@ -1,0 +1,28 @@
+/* Corner radius */
+$cr-large: rem-size(20);
+$cr-standard: rem-size(10);
+$cr-small: rem-size(8);
+
+/* Spacing */
+$s-space--4: rem-size(4);
+$s-space--8: rem-size(8);
+$s-space--16: rem-size(16);
+$s-space--24: rem-size(24);
+$s-space--32: rem-size(32);
+$s-space--40: rem-size(40);
+$s-space--48: rem-size(48);
+$s-space--56: rem-size(56);
+$s-space--64: rem-size(64);
+$s-space--72: rem-size(72);
+$s-space--80: rem-size(80);
+$s-space--88: rem-size(88);
+$s-space--96: rem-size(96);
+
+
+/* layout */
+$layout-columns: ('24':24);
+$gap: $s-space--24;
+
+
+/* Table */
+$tc-content-width: rem-size(350)

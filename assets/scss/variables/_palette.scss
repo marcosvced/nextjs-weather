@@ -1,0 +1,35 @@
+/* White */
+$c-light: hsla(0, 0%, 100%, 1);
+$c-off-light: hsla(0, 0%, 99%, 0.1);
+
+/* Grayscale */
+$c-grayscale--title: hsla(232, 12%, 24%, 1);
+$c-grayscale--body: hsla(247, 15%, 35%, 1);
+$c-grayscale--label: hsla(235, 14%, 50%, 1);
+$c-grayscale--placeholder: hsla(234, 18%, 68%, 1);
+$c-grayscale--line: hsla(232, 20%, 91%, 1);
+$c-grayscale--input-background: hsla(231, 28%, 95%, 1);
+$c-grayscale--background: hsla(240, 45%, 98%, 1);
+
+/* Main */
+$c-primary: hsla(212, 74%, 64%, 1);
+$c-secondary: change-color($c-primary, $lightness: 30%);
+$c-accent: change-color($c-primary, $saturation: 49%, $lightness: 54%);
+$c-lightened: hsla(211, 39%, 88%, 1);
+
+/* Helpers */
+$c-info: hsla(191, 86%, 52%, 1);
+$c-info--lightened: hsla(191, 100%, 92%, 1);
+$c-info--darkened: hsla(191, 100%, 36%, 1);
+
+$c-danger: hsla(335, 84%, 55%, 1);
+$c-danger--lightened: hsla(337, 100%, 97%, 1);
+$c-danger--darkened: hsla(335, 100%, 38%, 1);
+
+$c-warning: hsla(40, 89%, 60%, 1);
+$c-warning--lightened: hsla(39, 100%, 92%, 1);
+$c-warning--darkened: hsla(40, 100%, 32%, 1);
+
+$c-success: hsla(164, 100%, 36%, 1);
+$c-success--lightened: hsla(162, 71%, 97%, 1);
+$c-success--darkened: hsla(164, 100%, 29%, 1);
