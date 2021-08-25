@@ -1,4 +1,9 @@
 .weather-card {
+  > *,
+  > * > *{
+    @include slow-transition(all);
+  }
+
   width: min-content;
   height: min-content;
   min-width: rem-size(271);
@@ -17,6 +22,8 @@
 
   @include media(lg) {
     padding: $s-space--24;
+    min-width: rem-size(200);
+    max-width: rem-size(200);
   }
 
   .city {
@@ -33,6 +40,9 @@
       size: $f-size--small;
       weight: $f-weight--medium;
     };
+    @include media(lg) {
+      margin-bottom: $s-space--24;
+    }
   }
 
   .wrapper {

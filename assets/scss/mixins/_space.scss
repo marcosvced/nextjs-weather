@@ -9,7 +9,7 @@
 
 }
 
-@mixin space-x($gutter, $last-child: false,) {
+@mixin space-x($gutter, $last-child: false) {
   @if ($last-child) {
     > * {
       margin-right: $gutter;
@@ -21,7 +21,7 @@
   }
 }
 
-@mixin space-y($gutter, $last-child: false, ) {
+@mixin space-y($gutter, $last-child: false ) {
   @if ($last-child) {
     > * {
       margin-bottom: $gutter;

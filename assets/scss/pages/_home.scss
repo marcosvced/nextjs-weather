@@ -1,5 +1,63 @@
+.main {
+  width: 100%;
+  padding: $s-space--24;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @include media(xxs) {
+    max-width: map-get($breakpoints, xxs);
+  }
+  @include media(xs) {
+    max-width: map-get($breakpoints, xs);
+  }
+  @include media(sm) {
+    max-width: map-get($breakpoints, sm);
+  }
+  @include media(md) {
+    max-width: map-get($breakpoints, md);
+  }
+  @include media(lg) {
+    max-width: map-get($breakpoints, lg);
+  }
+  @include media(xl) {
+    max-width: map-get($breakpoints, xl);
+  }
+}
+
 .widget-wrapper {
+  margin: auto;
+  width: min-content;
+  border-radius: $cr-large;
   background-color: $c-lightened;
-  padding: $s-space--32;
+  padding: $s-space--72 rem-size(14);
   display: flex;
+  overflow-x: auto;
+  border: rem-size(8) solid $c-lightened;
+  @include space-x($s-space--24);
+
+  @include media(xxs) {
+    max-width: rem-size(312);
+  }
+  @include media(xs) {
+    max-width: rem-size(500);
+  }
+  @include media(sm) {
+    max-width: rem-size(700);
+  }
+  @include media(md) {
+    max-width: rem-size(950);
+  }
+  @include media(lg) {
+    max-width: rem-size(1400);
+    padding: $s-space--72
+  }
+  @include media(xl) {
+    max-width: rem-size(1550);
+  }
+
+  .card-wrapper:not(:last-of-type) {
+    padding-right: $s-space--24;
+    border-right: rem-size(1) dashed $c-primary;
+  }
 }
