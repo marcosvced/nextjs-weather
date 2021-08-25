@@ -12,6 +12,7 @@ module.exports = {
         });
         config.resolve.alias = {
             ...config.resolve.alias,
+            '@': path.resolve(__dirname, '.'),
             '@icon': path.resolve(__dirname, 'assets/icons')
         }
         return config;
